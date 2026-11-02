@@ -1,6 +1,6 @@
 # ta25blearn
 
-## Запуск
+## Running
 
 ```bash
 npm install
