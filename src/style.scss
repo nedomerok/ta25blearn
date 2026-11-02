@@ -1,0 +1,119 @@
+
+@use "bulma/sass" with (
+  $primary: #15803d,
+  $success: #15803d,
+  $link: #15803d
+);
+
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #1f2937;
+  background: #edf4ee;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #edf4ee, #dcebdd);
+  color: #1f2937;
+}
+
+.app-shell {
+  max-width: 760px;
+}
+
+/* Header */
+.eyebrow {
+  color: #166534;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  margin-bottom: .75rem;
+}
+
+.title {
+  color: #163b25 !important;
+  font-weight: 800;
+}
+
+.subtitle {
+  color: #405548 !important;
+}
+
+/* Add task form */
+.add-box,
+.task-box {
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #d1dfd3;
+  box-shadow: 0 3px 12px rgba(20, 60, 30, .08);
+}
+
+.label {
+  color: #243b2c;
+}
+
+.input,
+.select select {
+  color: #243b2c;
+  background-color: #ffffff;
+}
+
+/* Task cards */
+.task-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-left: 5px solid #a3a3a3;
+  margin-bottom: .75rem;
+}
+
+.priority-high {
+  border-left-color: #e04455;
+}
+
+.priority-medium {
+  border-left-color: #e6a323;
+}
+
+.priority-low {
+  border-left-color: #279b63;
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  color: #26382c;
+  font-weight: 500;
+}
+
+.task-label span {
+  color: #26382c;
+}
+
+.completed .task-label span {
+  color: #65746a;
+  text-decoration: line-through;
+}
+
+.empty-note {
+  color: #526358;
+  padding: .5rem 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .field.has-addons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
+  .field.has-addons .control {
+    margin: 0;
+  }
+
+  .field.has-addons .control.is-expanded {
+    flex-basis: 100%;
+  }
+}
